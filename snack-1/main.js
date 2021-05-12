@@ -9,11 +9,17 @@ console.log(BiciDaCorsa);
 // console.log(nome.peso);
 
 //Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
-const biciLeggera = 1400;
+let biciLeggera = BiciDaCorsa[0];
+//const biciLeggera = 1400;
+
 for (let i = 0; i < BiciDaCorsa.length; i++) {
     const elem = BiciDaCorsa[i];
-    if (elem.peso <= biciLeggera)
+    //bici con peso minore
+    if (elem.peso < biciLeggera.peso) {
+        biciLeggera = elem
+
         document.getElementById('biciPiuma').innerHTML = `
-        <p>La bici più leggera è ${elem.nome}, con i suoi ${elem.peso} gr. </p>
-        `;
+            <p>La bici più leggera è ${elem.nome}, con i suoi ${elem.peso} gr. </p>
+            `;
+    }
 }

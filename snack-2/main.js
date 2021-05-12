@@ -27,5 +27,5 @@ for (let i = 0; i < coppaItalia.length; i++) {
 console.log(coppaItalia);
 
 //Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
-const nuovoArrey = { ...coppaItalia };
+const nuovoArrey = [...coppaItalia];
 console.log(nuovoArrey);
