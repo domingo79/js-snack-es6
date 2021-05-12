@@ -11,18 +11,18 @@ const voti = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], bocciato = 5, promosso = 10;
  * @param {numero massimo} max 
  * @returns 
  */
-function test(array, min, max) {
+function filtroConParametri(array, min, max) {
     const nuovoArray = array.filter((elemento) => {
         if (elemento > min && elemento < max) {
             return true;
         }
         return false;
     });
+    console.log(nuovoArray);
     return nuovoArray;
 };
-console.log(test(voti, bocciato, promosso));
+filtroConParametri(voti, bocciato, promosso);
 
-//La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 /* METODO FILTER */
 const promossi = voti.filter((esame) => {
     if (esame > bocciato && esame <= promosso) {
@@ -32,7 +32,6 @@ const promossi = voti.filter((esame) => {
 });
 console.log(promossi);
 
-//La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 /* METODO FOREACH */
 voti.forEach((voto, i, voti) => {
     if (voto > 5) {
